@@ -11,7 +11,7 @@ namespace CarPark
 {
     class ParkReport 
     {
-        public int CostPark(List<Car> Park)
+        public int CostPark(List<ICarICE> Park)
         {
             int allSum = 0;
             foreach (var a in Park)
@@ -21,7 +21,7 @@ namespace CarPark
             return allSum;
         }
 
-        public void SortFuelUsed(List<Car> Park)
+        public void SortFuelUsed(List<ICarICE> Park)
         {
             Dictionary<int, int> Fuel = new Dictionary<int, int>();
             for (int i = 0; i < Park.Count; i++)
@@ -57,7 +57,7 @@ namespace CarPark
 
         }
 
-        public void SpeedRange(List<Car> Park, string diap)
+        public void SpeedRange(List<ICarICE> Park, string diap)
         {
             string[] ranges = diap.Split('-');
             int minDiap = Convert.ToInt32(ranges[0]);
@@ -69,6 +69,15 @@ namespace CarPark
                     Console.WriteLine(aCar.Name);
                 }
             }
+        }
+
+        public void a(List<ICarICE> Park)
+        {
+            foreach (var a in Park)
+            {
+                Console.WriteLine();
+            }
+            Park.
         }
     }
 }

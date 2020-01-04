@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarPark
 {
-    class Car 
+    class PassengerCar : ICarICE
     {
         public int IdCar { get; set; }
         public string Name { get; set; }
@@ -15,11 +15,12 @@ namespace CarPark
         public int Price { get; set; }
         public int FuelUsed { get; set; }
         public int MaxSpeed { get; set; }
-        public string Category { get; set; }
 
-        public Car() { }
+        public bool Roof { get; set; }
 
-        public Car(int idCar, string name, int volume, int price, int fuelUsed, int maxSpeed, string category)
+        public PassengerCar() { }
+
+        public PassengerCar(int idCar, string name, int volume, int price, int fuelUsed, int maxSpeed,bool roof)
         {
             this.IdCar = idCar;
             this.Name = name;
@@ -27,7 +28,9 @@ namespace CarPark
             this.Price = price;
             this.FuelUsed = fuelUsed;
             this.MaxSpeed = maxSpeed;
-            this.Category = category;
+
         }
+
+        
     }
 }

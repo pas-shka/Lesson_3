@@ -13,16 +13,26 @@ namespace CarPark
         private string line;
         private string[] lineSplit;
 
-        public List<Car> ReadFile(string pathRead)
+        public List<ICarICE> ReadFile(string pathRead)
         {
-            List<Car> Park = new List<Car>();
+            List<ICarICE> Park = new List<ICarICE>();
 
             using (StreamReader sr = new StreamReader(pathRead))
             {
                 while ((line = sr.ReadLine()) != null)
                 {
                     lineSplit = line.Split('|');
-                    Park.Add(new Car(Convert.ToInt32(lineSplit[0]), lineSplit[1], Convert.ToInt32(lineSplit[2]), Convert.ToInt32(lineSplit[3]), Convert.ToInt32(lineSplit[4]), Convert.ToInt32(lineSplit[5]), lineSplit[6]));
+                    if (lineSplit[0]=="p" || lineSplit[0] == "P")
+                    {
+                        Park.Add(new PassengerCar(Convert.ToInt32(lineSplit[1]), lineSplit[2],
+                            Convert.ToInt32(lineSplit[3]), Convert.ToInt32(lineSplit[4]), Convert.ToInt32(lineSplit[5]),
+                            Convert.ToInt32(lineSplit[6]), Convert.ToBoolean(lineSplit[7])));
+
+                    }
+                    if (lineSplit[0] == "m" || lineSplit[0] == "M")
+                    {
+
+                    }
                 }
             }
             

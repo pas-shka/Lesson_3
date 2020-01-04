@@ -13,8 +13,9 @@ namespace CarPark
         {
             
             FileWork a = new FileWork();
+ 
             ParkReport b = new ParkReport();
-            Console.WriteLine(b.CostPark(a.ReadFile("../1.txt")));
+            b.SpeedRange(a.ReadFile("../1.txt"), "100-2000");
             
             Console.ReadKey();
         }
