@@ -1,0 +1,7 @@
+E:\Lessons\Lesson_3\CarPark\CarPark\bin\Debug\CarPark.exe.config
+E:\Lessons\Lesson_3\CarPark\CarPark\bin\Debug\CarPark.exe
+E:\Lessons\Lesson_3\CarPark\CarPark\bin\Debug\CarPark.pdb
+E:\Lessons\Lesson_3\CarPark\CarPark\obj\Debug\CarPark.csprojAssemblyReference.cache
+E:\Lessons\Lesson_3\CarPark\CarPark\obj\Debug\CarPark.csproj.CoreCompileInputs.cache
+E:\Lessons\Lesson_3\CarPark\CarPark\obj\Debug\CarPark.exe
+E:\Lessons\Lesson_3\CarPark\CarPark\obj\Debug\CarPark.pdb
